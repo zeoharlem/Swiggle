@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_dash_nav_graph"
+    app:startDestination="@id/moviesFragment">
+
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="ng.com.zeoharlem.swopit.fragments.MoviesFragment"
+        android:label="Movies"
+        tools:layout="@layout/fragment_movies" />
+    <fragment
+        android:id="@+id/tvShowsFragment"
+        android:name="ng.com.zeoharlem.swopit.fragments.TvShowsFragment"
+        android:label="Shows"
+        tools:layout="@layout/fragment_tv_shows" />
+    <fragment
+        android:id="@+id/trendingFragment"
+        android:name="ng.com.zeoharlem.swopit.fragments.TrendingFragment"
+        android:label="Trending"
+        tools:layout="@layout/fragment_trending" />
+    <fragment
+        android:id="@+id/tvSeasonsFragment"
+        android:name="ng.com.zeoharlem.swopit.fragments.TvSeasonsFragment"
+        android:label="Seasons"
+        tools:layout="@layout/fragment_tv_seasons" />
+    <fragment
+        android:id="@+id/peopleFragment"
+        android:name="ng.com.zeoharlem.swopit.fragments.PeopleFragment"
+        android:label="People"
+        tools:layout="@layout/fragment_people" />
+</navigation>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <font
+        android:font="@font/leaguespartanbold"
+        app:font="@font/leaguespartanbold" />
+
+    <font
+        android:font="@font/spartanblack"
+        app:font="@font/spartanblack" />
+
+    <font
+        android:font="@font/spartanregular"
+        app:font="@font/spartanregular" />
+
+    <font
+        android:font="@font/spartanmedium"
+        app:font="@font/spartanmedium" />
+
+    <font
+        android:font="@font/spartansemibold"
+        app:font="@font/spartansemibold" />
+
+    <font
+        android:font="@font/poppinsblack"
+        app:font="@font/poppinsblack" />
+
+    <font
+        android:font="@font/poppinsextrabold"
+        app:font="@font/poppinsextrabold" />
+
+    <font
+        android:font="@font/poppinsbold"
+        app:font="@font/poppinsbold" />
+
+    <font
+        android:font="@font/poppinssemibold"
+        app:font="@font/poppinssemibold" />
+
+    <font
+        android:font="@font/poppinsmedium"
+        app:font="@font/poppinsmedium" />
+
+    <font
+        android:font="@font/poppinsregular"
+        app:font="@font/poppinsregular" />
+</font-family>
