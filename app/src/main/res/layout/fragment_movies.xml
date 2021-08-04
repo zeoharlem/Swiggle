@@ -23,8 +23,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/spartanblack"
             android:text="All"
-            android:textSize="14sp"
             android:textColor="#888"
+            android:textSize="14sp"
             app:icon="@drawable/menu_burger_icon"
             app:strokeColor="#999" />
 
@@ -32,9 +32,9 @@
             android:id="@+id/category_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
+            android:orientation="horizontal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
     </LinearLayout>
 
@@ -50,7 +50,10 @@
         android:id="@+id/movies_shimmer_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toBottomOf="@+id/home_view_pager" />
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/home_view_pager"
+        app:shimmer_recycler_item_count="3"
+        app:shimmer_recycler_layout="@layout/popular_movie_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

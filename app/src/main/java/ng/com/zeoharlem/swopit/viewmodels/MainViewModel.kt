@@ -4,17 +4,22 @@ import android.app.Application
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
+import android.util.Log
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.google.gson.Gson
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import ng.com.zeoharlem.swopit.datasources.repository.Repository
 import ng.com.zeoharlem.swopit.models.PopularResponse
 import ng.com.zeoharlem.swopit.util.NetworkResults
 import retrofit2.Response
+import javax.inject.Inject
 
-class MainViewModel @ViewModelInject constructor(private val repository: Repository, application: Application): AndroidViewModel(application) {
+@HiltViewModel
+class MainViewModel @Inject constructor(private val repository: Repository, application: Application): AndroidViewModel(application) {
 
     var popularResponse: MutableLiveData<NetworkResults<PopularResponse>>   = MutableLiveData()
 
@@ -29,6 +34,7 @@ class MainViewModel @ViewModelInject constructor(private val repository: Reposit
                 popularResponse.value   = handlePopularMovieResponse(response)
             }
             catch (exception: Exception){
+                Log.e("MainViewModel", "getPopularMoviesCall: "+exception.message)
                 popularResponse.value   = NetworkResults.Error("Data Not Found")
             }
         }
@@ -46,6 +52,7 @@ class MainViewModel @ViewModelInject constructor(private val repository: Reposit
                 return NetworkResults.Error("Api Key Not COrrect")
             }
             response.body()!!.populars.isNullOrEmpty() -> {
+                Log.e("MainViewModel", "getPopularMoviesCall: "+response.raw().toString())
                 return NetworkResults.Error("No data found")
             }
             response.isSuccessful -> {

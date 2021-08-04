@@ -75,7 +75,7 @@ class MoviesFragment : Fragment() {
 
     private fun applyQueries(): HashMap<String, String> {
         val queries: HashMap<String, String>    = HashMap()
-        queries["number"]   = "50"
+        //queries["number"]   = "50"
         queries["api_key"]  = Constants.API_KEY
         return queries
     }
