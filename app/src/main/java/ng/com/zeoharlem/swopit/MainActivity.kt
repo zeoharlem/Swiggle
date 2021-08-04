@@ -13,9 +13,11 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import dagger.hilt.android.AndroidEntryPoint
 import ng.com.zeoharlem.swopit.databinding.ActivityMainBinding
 import ng.com.zeoharlem.swopit.dialog.LoginDialogBottomSheet
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     val TAG = "MainActivity"
     private lateinit var navController: NavController
