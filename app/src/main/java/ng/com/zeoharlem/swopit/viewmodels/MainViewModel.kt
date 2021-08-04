@@ -52,7 +52,7 @@ class MainViewModel @Inject constructor(private val repository: Repository, appl
                 return NetworkResults.Error("Api Key Not COrrect")
             }
             response.body()!!.populars.isNullOrEmpty() -> {
-                Log.e("MainViewModel", "getPopularMoviesCall: "+response.raw().toString())
+                Log.e("MainViewModel", "getPopularMoviesCallResponse: "+response.body().toString())
                 return NetworkResults.Error("No data found")
             }
             response.isSuccessful -> {

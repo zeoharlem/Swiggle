@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName
 data class PopularResponse(
     @SerializedName("page")
     val page: Int,
-    @SerializedName("populars")
+    @SerializedName("results")
     val populars: List<Popular>,
     @SerializedName("total_pages")
     val totalPages: Int,
