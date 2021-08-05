@@ -6,24 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <fragment
-        android:id="@+id/fragmentContainerView"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/my_dash_nav_graph" />
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/fragmentContainerView"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/my_dash_nav_graph" />
+
+    </androidx.core.widget.NestedScrollView>
 
     <View
         android:layout_width="70dp"
         android:layout_height="75dp"
-        android:translationZ="-90dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="17dp"
         android:layout_centerVertical="true"
         android:layout_gravity="bottom|center"
-        android:background="@drawable/home_fab" />
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/home_fab"
+        android:translationZ="-45dp" />
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"

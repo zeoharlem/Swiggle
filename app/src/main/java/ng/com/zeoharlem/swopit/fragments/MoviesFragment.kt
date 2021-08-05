@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
@@ -19,6 +20,7 @@ import ng.com.zeoharlem.swopit.adapters.MoviesViewPagerAdapter
 import ng.com.zeoharlem.swopit.adapters.PopularMoviesAdapter
 import ng.com.zeoharlem.swopit.models.HomeDataSliderItems
 import ng.com.zeoharlem.swopit.util.Constants
+import ng.com.zeoharlem.swopit.util.ItemOffsetDecoration
 import ng.com.zeoharlem.swopit.util.NetworkResults
 import ng.com.zeoharlem.swopit.viewmodels.MainViewModel
 
@@ -105,7 +107,9 @@ class MoviesFragment : Fragment() {
 
     private fun setUpRecyclerView(){
         recyclerView                = v.findViewById<ShimmerRecyclerView>(R.id.movies_shimmer_recycler_view)
-        recyclerView.layoutManager  = LinearLayoutManager(requireContext())
+        //val itemOffsetDecoration    = ItemOffsetDecoration(requireActivity(), R.dimen.item_offset)
+        recyclerView.layoutManager  = GridLayoutManager(requireContext(), 2)
+        //recyclerView.addItemDecoration(itemOffsetDecoration)
         recyclerView.adapter        = popularMoviesAdapter
         showShimmerEffect()
     }
